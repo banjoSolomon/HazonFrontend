@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     font-family: 'Overpass', serif;
@@ -6,12 +5,10 @@ body {
     color: #333;
 }
 
-
 .dashboard {
     display: flex;
     flex-direction: column;
 }
-
 
 .sidebar {
     width: 200px;
@@ -25,7 +22,6 @@ body {
     top: 0;
     z-index: 1000;
 }
-
 
 .logo {
     display: flex;
@@ -58,7 +54,6 @@ body {
     margin: 0 5px;
 }
 
-
 nav ul {
     list-style-type: disc;
     padding-left: 20px;
@@ -74,13 +69,11 @@ nav ul li {
     align-items: center;
 }
 
-
 nav ul li:hover {
     color: white;
     border-color: #B9B9FF;
     background-color: #B9B9FF;
 }
-
 
 nav ul li.active {
     background-color: #B9B9FF;
@@ -88,20 +81,11 @@ nav ul li.active {
     border: 3px solid #B9B9FF;
 }
 
-
-nav ul li:nth-child(2):hover {
-    color: white;
-    border-color: #B9B9FF;
-    background-color: #B9B9FF;
-}
-
-
 .mainContent {
     flex: 1;
     padding: 80px 20px;
     margin-left: 200px;
 }
-
 
 .header {
     position: fixed;
@@ -117,14 +101,12 @@ nav ul li:nth-child(2):hover {
     justify-content: space-between;
 }
 
-
 .tableSection {
     margin-top: 20px;
     border: 5px solid white;
     background-color: white;
     padding: 0;
 }
-
 
 table {
     width: 100%;
@@ -144,7 +126,6 @@ table th {
 .tableSection tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-
 
 .pagination {
     display: flex;
@@ -170,7 +151,22 @@ table th {
     border-color: blue;
 }
 
+/* Responsive Image Styling */
+.elephant-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
+    transition: transform 0.3s ease;
+}
 
+.elephant-image:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
     .dashboard {
         flex-direction: column;
@@ -192,8 +188,11 @@ table th {
         left: 0;
         right: 0;
     }
-}
 
+    .elephant-image {
+        max-width: 90%;
+    }
+}
 
 @media screen and (max-width: 480px) {
     .sidebar {
@@ -217,5 +216,9 @@ table th {
 
     .logo {
         margin-top: 80px;
+    }
+
+    .elephant-image {
+        max-width: 100%;
     }
 }
