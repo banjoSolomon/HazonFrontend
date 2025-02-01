@@ -95,7 +95,7 @@ const ElephantDashboard = () => {
             </aside>
             <main className={Style.mainContent}>
                 <header className={Style.header}>
-                    <p>Acumen Digital Interview Task / Elephantom</p>
+                    <p>Acumen Digital Interview Task / Elephantom {activePage === 'elephant' && ' > Elephant'}</p>
                 </header>
                 <section className={Style.tableSection}>
                     <h2>All Elephants</h2>
