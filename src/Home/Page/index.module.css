@@ -1,0 +1,221 @@
+
+body {
+    margin: 0;
+    font-family: 'Overpass', serif;
+    background-color: #F5F8FF;
+    color: #333;
+}
+
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar {
+    width: 200px;
+    background-color: #E6E6FA;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ccc;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.2);
+}
+
+.breadcrumb {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.breadcrumb span {
+    margin: 0 5px;
+}
+
+
+nav ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+
+nav ul li:hover {
+    color: white;
+    border-color: #B9B9FF;
+    background-color: #B9B9FF;
+}
+
+
+nav ul li.active {
+    background-color: #B9B9FF;
+    color: white;
+    border: 3px solid #B9B9FF;
+}
+
+
+nav ul li:nth-child(2):hover {
+    color: white;
+    border-color: #B9B9FF;
+    background-color: #B9B9FF;
+}
+
+
+.mainContent {
+    flex: 1;
+    padding: 80px 20px;
+    margin-left: 200px;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 200px;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.tableSection {
+    margin-top: 20px;
+    border: 5px solid white;
+    background-color: white;
+    padding: 0;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+.tableSection tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination span {
+    margin: 0 15px;
+}
+
+.pagination button {
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 0 5px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.pagination button:hover {
+    color: blue;
+    border-color: blue;
+}
+
+
+@media screen and (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        border-right: none;
+    }
+
+    .mainContent {
+        margin-left: 0;
+        padding-top: 120px;
+    }
+
+    .header {
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .mainContent {
+        margin-left: 0;
+        margin-top: 180px;
+        padding: 10px;
+    }
+
+    nav ul li {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .header {
+        padding: 5px;
+    }
+
+    .logo {
+        margin-top: 80px;
+    }
+}
