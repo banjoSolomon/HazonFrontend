@@ -106,11 +106,13 @@ nav ul li.active {
     border: 5px solid white;
     background-color: white;
     padding: 0;
+    overflow-x: auto;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: auto;
 }
 
 table th,
